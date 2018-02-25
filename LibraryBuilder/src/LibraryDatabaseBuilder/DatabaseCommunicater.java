@@ -16,7 +16,7 @@ public class DatabaseCommunicater {
 	private static final String LOGINURL = "jdbc:sqlserver://192.168.0.5:1401;"
 			+ "databaseName=SongRecommender;"
 			+ "user=SA;"
-			+ "password=<removedpassword>;"; // contact RonZapp for actual password
+			+ "password=" + PasswordKeeper.getPassword() + ";"; // PasswordKeeper class hidden from GitHub. Contact RonZapp for password
 	
 	private Connection con;
 	private Statement stmt;

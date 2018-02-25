@@ -29,7 +29,7 @@ public class Driver {
 	}
 	
 	/* Returns new build of MusicLibrary from LIBRARYPATH */
-	public static MusicLibrary getNewLibrary() {
+	public static MusicLibrary buildNewLibrary() {
 		DirectoryCrawler dc = new DirectoryCrawler(LIBRARYPATH, JSON);
 		MusicLibrary library = new MusicLibrary();
 		library.addSong(dc.crawl());
@@ -49,7 +49,7 @@ public class Driver {
 	 * Useful for determining size of varchar datatypes in SQL Server
 	 */
 	public static void printDataMaxLengths() {
-		MusicLibrary library = getNewLibrary();
+		MusicLibrary library = buildNewLibrary();
 		HashMap<String, Song> allSongs = library.getAllSongs();
 		int artistLength = 0;
 		int titleLength = 0;
